@@ -3,12 +3,52 @@
 import UIKit
 
 class ProfileHeaderView: UIView {
-
-    var profileImageView: UIImageView!
-    var button: UIButton!
-    var userName: UILabel!
-    var userStatus: UILabel!
-
+    
+    var profileImageView: UIImageView = {
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        imageView.image = UIImage(named: "HipsterCat")
+        imageView.layer.cornerRadius = imageView.frame.height / 2
+        imageView.layer.borderWidth = 3
+        imageView.layer.masksToBounds = true
+        imageView.layer.borderColor = UIColor.white.cgColor
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return imageView
+    }()
+    
+    var button: UIButton = {
+        let buttonView = UIButton()
+        buttonView.translatesAutoresizingMaskIntoConstraints = false
+        buttonView.setTitle("Show status", for: .normal)
+        buttonView.setTitleColor(UIColor.white, for: .normal)
+        buttonView.layer.backgroundColor = UIColor.blue.cgColor
+        buttonView.layer.cornerRadius = 4
+        buttonView.layer.shadowRadius = 4
+        buttonView.layer.shadowColor = UIColor.black.cgColor
+        buttonView.layer.shadowOpacity = 0.7
+        buttonView.layer.shadowOffset = CGSize(width: 4, height: 4)
+        return buttonView
+    }()
+    
+    var userName: UILabel = {
+        let labelView = UILabel()
+        labelView.translatesAutoresizingMaskIntoConstraints = false
+        labelView.text = "Hipster Cat"
+        labelView.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)
+        return labelView
+    }()
+    
+    var userStatus: UILabel = {
+        let labelView = UILabel()
+        labelView.translatesAutoresizingMaskIntoConstraints = false
+        labelView.text = "Waiting for something"
+        labelView.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
+        labelView.textColor = UIColor.gray
+        return labelView
+    }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,12 +61,16 @@ class ProfileHeaderView: UIView {
     
     
     func createScreenComponents() {
-        createProfileImage()
-        createUserName()
-        createStatus()
-        createButtonShowStatus()
+        self.addSubview(profileImageView)
+        self.addSubview(button)
+        self.addSubview(userName)
+        self.addSubview(userStatus)
+        addTargets()
         constraintElements()
-       
+    }
+    
+    func addTargets() {
+        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
     
     func constraintElements() {
@@ -35,7 +79,7 @@ class ProfileHeaderView: UIView {
         profileImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
         profileImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         profileImageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
-    
+        
         userName.topAnchor.constraint(equalTo: self.topAnchor, constant: 27).isActive = true
         userName.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 16).isActive = true
         userName.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
@@ -51,54 +95,10 @@ class ProfileHeaderView: UIView {
         
     }
     
-    func createButtonShowStatus() {
-        button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Show status", for: .normal)
-        button.setTitleColor(UIColor.white, for: .normal)
-        button.layer.backgroundColor = UIColor.blue.cgColor
-        button.layer.cornerRadius = 4
-        button.layer.shadowRadius = 4
-        button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOpacity = 0.7
-        button.layer.shadowOffset = CGSize(width: 4, height: 4)
-        self.addSubview(button)
-        
-        button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-    }
-    
     @objc func buttonPressed() {
         print(userStatus.text ?? "")
     }
-    
-    func createStatus() {
-        userStatus = UILabel()
-        userStatus.translatesAutoresizingMaskIntoConstraints = false
-        userStatus.text = "Waiting for something"
-        userStatus.font = UIFont.systemFont(ofSize: 14, weight: UIFont.Weight.regular)
-        userStatus.textColor = UIColor.gray
-        self.addSubview(userStatus)
-    }
-    
-    func createUserName() {
-        userName = UILabel()
-        userName.translatesAutoresizingMaskIntoConstraints = false
-        userName.text = "Hipster Cat"
-        userName.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.bold)
-        self.addSubview(userName)
-    }
-    
-    func createProfileImage() {
-        profileImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        profileImageView.image = UIImage(named: "HipsterCat")
-        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
-        profileImageView.layer.borderWidth = 3
-        profileImageView.layer.masksToBounds = true
-        profileImageView.layer.borderColor = UIColor.white.cgColor
-        profileImageView.clipsToBounds = true
-        profileImageView.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(profileImageView)
-    }
+
     
     
 }
