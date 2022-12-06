@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
         tabBar.viewControllers = [createFirstController(), createSecondController()]
-        tabBar.tabBar.backgroundColor = .lightGray
+        tabBar.tabBar.backgroundColor = .white
         return tabBar
     }
     
