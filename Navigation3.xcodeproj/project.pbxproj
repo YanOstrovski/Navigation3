@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		E24D65B4293F3782009D3FA0 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D65B3293F3782009D3FA0 /* ProfileHeaderView.swift */; };
 		E2524C45293B1CAB00AFBEC6 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2524C41293B1CAB00AFBEC6 /* InfoViewController.swift */; };
 		E2524C46293B1CAB00AFBEC6 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2524C42293B1CAB00AFBEC6 /* PostViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
 		E24D65B3293F3782009D3FA0 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		E2524C41293B1CAB00AFBEC6 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		E2524C42293B1CAB00AFBEC6 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				E2524C41293B1CAB00AFBEC6 /* InfoViewController.swift */,
 				E2524C42293B1CAB00AFBEC6 /* PostViewController.swift */,
 				E24D65B2293F3756009D3FA0 /* profile */,
+
 			);
 			path = Navigation3;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 				E2524C47293B1CAB00AFBEC6 /* FeedViewController.swift in Sources */,
 				E2524C46293B1CAB00AFBEC6 /* PostViewController.swift in Sources */,
 				E24D65B4293F3782009D3FA0 /* ProfileHeaderView.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
