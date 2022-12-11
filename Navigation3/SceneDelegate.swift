@@ -7,21 +7,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     
-    func createFirstController() -> UINavigationController {
+    func createProfile() -> UINavigationController {
         let nvc = UINavigationController(rootViewController:  ProfileViewController())
         nvc.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person"), tag: 0)
         return nvc
     }
     
-    func createSecondController() -> UINavigationController {
+    func createFeed() -> UINavigationController {
         let nvc = UINavigationController(rootViewController:  FeedViewController())
         nvc.tabBarItem = UITabBarItem(title: "Лента", image: UIImage(systemName: "list.star"), tag: 1)
         return nvc
     }
+    
+    let loginViewController: UINavigationController = {
+        let vc = UINavigationController(rootViewController: LogInViewController())
+        vc.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "house"), tag: 2)
+        return vc
+    }()
 
     func createTabBar() -> UITabBarController {
         let tabBar = UITabBarController()
-        tabBar.viewControllers = [createFirstController(), createSecondController()]
+        tabBar.viewControllers = [createFeed(), loginViewController]
         tabBar.tabBar.backgroundColor = .white
         return tabBar
     }

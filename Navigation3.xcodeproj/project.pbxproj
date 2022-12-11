@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
+		E218424729446CCA004E5E3F /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E218424629446CCA004E5E3F /* LogInViewController.swift */; };
 		E24D65B4293F3782009D3FA0 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24D65B3293F3782009D3FA0 /* ProfileHeaderView.swift */; };
 		E2524C45293B1CAB00AFBEC6 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2524C41293B1CAB00AFBEC6 /* InfoViewController.swift */; };
 		E2524C46293B1CAB00AFBEC6 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2524C42293B1CAB00AFBEC6 /* PostViewController.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
+		E218424629446CCA004E5E3F /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E24D65B3293F3782009D3FA0 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		E2524C41293B1CAB00AFBEC6 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		E2524C42293B1CAB00AFBEC6 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
@@ -52,6 +52,7 @@
 			children = (
 				E2524C44293B1CAB00AFBEC6 /* ProfileViewController.swift */,
 				E24D65B3293F3782009D3FA0 /* ProfileHeaderView.swift */,
+				E218424629446CCA004E5E3F /* LogInViewController.swift */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -85,7 +86,6 @@
 				E2524C41293B1CAB00AFBEC6 /* InfoViewController.swift */,
 				E2524C42293B1CAB00AFBEC6 /* PostViewController.swift */,
 				E24D65B2293F3756009D3FA0 /* profile */,
-
 			);
 			path = Navigation3;
 			sourceTree = "<group>";
@@ -162,13 +162,13 @@
 			files = (
 				E2E3360A293B1B7E0058F3F5 /* ViewController.swift in Sources */,
 				E2E33606293B1B7E0058F3F5 /* AppDelegate.swift in Sources */,
+				E218424729446CCA004E5E3F /* LogInViewController.swift in Sources */,
 				E2524C45293B1CAB00AFBEC6 /* InfoViewController.swift in Sources */,
 				E2E33608293B1B7E0058F3F5 /* SceneDelegate.swift in Sources */,
 				E2524C48293B1CAB00AFBEC6 /* ProfileViewController.swift in Sources */,
 				E2524C47293B1CAB00AFBEC6 /* FeedViewController.swift in Sources */,
 				E2524C46293B1CAB00AFBEC6 /* PostViewController.swift in Sources */,
 				E24D65B4293F3782009D3FA0 /* ProfileHeaderView.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
